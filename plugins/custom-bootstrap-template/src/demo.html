@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Demo</title>
+
+		<!-- Vendors styles-->
+		<link rel="stylesheet" href="../plugins/simplebar/dist/simplebar.css" />
+		<!-- Datatables -->
+		<link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css" />
+
+		<!-- Main styles-->
+		<link rel="stylesheet" href="css/bs-coreui.css" />
+
+		<!-- Icons: Fontawesome 6 and CoreUI -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+		<link rel="stylesheet" href="../plugins/coreui-comp/icons/css/all.min.css" />
+
+		<!-- Jquery -->
+		<script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+
+		<!-- Core UI Scripts -->
+		<script defer src="../plugins/coreui-comp/coreui/dist/js/coreui.bundle.js"></script>
+		<script defer src="../plugins/simplebar/dist/simplebar.min.js"></script>
+		<script defer src="../plugins/coreui-comp/utils/dist/coreui-utils.js"></script>
+
+		<!-- Bootstrap 5 -->
+		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- Datatables -->
+		<script defer src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script defer src="../node_modules/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js"></script>
+
+		<script defer src="js/site.js" type="module"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+			* {
+				font-family: "Inter", sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sidebar sidebar-dark sidebar-fixed min-vh-100" id="sidebar">
+			<div class="sidebar-brand d-none d-md-flex">
+				<img class="sidebar-brand-full" src="../assets/svg/icon-logo-full.svg" alt="" />
+				<img class="sidebar-brand-narrow" src="../assets/svg/icon-logo-narrow.svg" alt="" />
+			</div>
+			<ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
+				<li class="nav-title">MAIN NAVIGATION</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/">
+						<i class="nav-icon cil-gauge"></i>
+						Dashboard
+					</a>
+				</li>
+				<li class="nav-title">TITLE 1</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-user"></i>
+						Employees
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-building"></i>
+						Department
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-location-pin"></i>
+						Designation
+					</a>
+				</li>
+				<li class="nav-title">TITLE 2</li>
+				<li class="nav-group">
+					<a class="nav-link nav-group-toggle" href="#">
+						<i class="nav-icon cil-filter"></i>
+						Miscellaneous
+					</a>
+					<ul class="nav-group-items">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Option A</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Option B</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Option C</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Option D</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-title">TITLE 3</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-double-quote-sans-left"></i>
+						About
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-address-book"></i>
+						Contacts
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<i class="nav-icon cil-book"></i>
+						Resources
+					</a>
+				</li>
+			</ul>
+			<button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+		</div>
+		<div class="wrapper d-flex flex-column bg-light">
+			<header class="header header-sticky mb-4 shadow-sm">
+				<div class="container-fluid">
+					<button class="header-toggler" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+						<i class="cil-hamburger-menu"></i>
+					</button>
+					<a class="header-brand" href="#"></a>
+					<ul class="header-nav d-md-flex">
+						<li class="nav-item">
+							<div class="search position-relative">
+								<input class="form-control form-control-sm pe-4" type="text" placeholder="Search" />
+								<i class="fa-solid fa-search position-absolute small opacity-50" style="right: 0.5rem; top: 0.5rem"></i>
+							</div>
+						</li>
+					</ul>
+					<ul class="header-nav ms-auto">
+						<li class="nav-item dropdown">
+							<a class="nav-link py-0 position-relative overflow-visible" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="icon icon-lg cil-bell"></i>
+								<div class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+									14
+									<div class="visually-hidden">unread messages</div>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end pt-0">
+								<div class="dropdown-header bg-light">
+									<span class="fw-semibold">Notifications</span>
+									<hr class="my-2" />
+								</div>
+								<a class="dropdown-item" href="#">
+									<div class="row gap-2">
+										<div class="col-1">
+											<div class="avatar">
+												<img class="avatar-img" src="../assets/avatars/user2.PNG" alt="" />
+											</div>
+										</div>
+										<div class="col-9">
+											<small>
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+												<p class="small fw-bold">Today at 7:10 PM</p>
+											</small>
+										</div>
+									</div>
+								</a>
+								<a class="dropdown-item" href="#">
+									<div class="row gap-2">
+										<div class="col-1">
+											<div class="avatar">
+												<img class="avatar-img" src="../assets/avatars/user5.PNG" alt="" />
+											</div>
+										</div>
+										<div class="col-9">
+											<small>
+												Lorem ipsum dolor sit amet.
+												<p class="small fw-bold">Yesterday at 10:00 AM</p>
+											</small>
+										</div>
+									</div>
+								</a>
+								<a class="dropdown-item" href="#">
+									<div class="row gap-2">
+										<div class="col-1">
+											<div class="avatar">
+												<img class="avatar-img" src="../assets/avatars/user4.PNG" alt="" />
+											</div>
+										</div>
+										<div class="col-9">
+											<small>
+												Lorem, ipsum dolor sit amet consectetur elit.
+												<p class="small fw-bold">Today at 12:45 AM</p>
+											</small>
+										</div>
+									</div>
+								</a>
+							</div>
+						</li>
+						<li class="nav-item mx-3">
+							<a class="nav-link py-0 position-relative overflow-visible" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="icon icon-lg cil-inbox"></i>
+								<div class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+									99+
+									<div class="visually-hidden">unread messages</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="header-nav ms-3">
+						<li class="nav-item dropdown">
+							<a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								<div class="avatar">
+									<img class="avatar-img" src="../assets/avatars/user1.PNG" alt="" />
+								</div>
+								<span>Bruno Nash</span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end pt-0">
+								<div class="dropdown-header bg-light py-2">
+									<div class="fw-semibold">Account</div>
+								</div>
+								<a class="dropdown-item small" href="#"> Updates</a>
+								<a class="dropdown-item small" href="#"> Messages</a>
+								<a class="dropdown-item small" href="#"> Tasks<span class="badge bg-danger rounded-pill ms-2">30</span></a>
+								<a class="dropdown-item small" href="#"> Comments<span class="badge bg-success rounded-pill ms-2">9</span></a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item small" href="#"> Lock Account</a>
+								<a class="dropdown-item small" href="#"> Logout</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="header-divider"></div>
+				<div class="container-fluid">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb my-0 ms-2">
+							<li class="breadcrumb-item small">Home</li>
+							<li class="breadcrumb-item active small">Dashboard</li>
+						</ol>
+					</nav>
+				</div>
+			</header>
+			<main class="main w-100">
+				<div class="container min-vh-100">
+					<section>
+						<h3>TYPOGRAPHY</h3>
+						<hr />
+						<div class="row">
+							<div class="col-md-6">
+								<h1>H1</h1>
+								<h2>H2</h2>
+								<h3>H3</h3>
+								<h4>H4</h4>
+								<h5>H5</h5>
+								<h6>H6</h6>
+							</div>
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam explicabo numquam maiores facilis quo exercitationem, harum dolorem quibusdam, impedit facere laborum aspernatur debitis est officiis, doloremque alias perferendis fuga nobis.</p>
+								<small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quas omnis ut illo reiciendis? Optio quia enim nihil expedita fugiat praesentium sapiente blanditiis, minus quidem!</small>
+							</div>
+						</div>
+					</section>
+					<section class="mt-5 pt-5">
+						<h3>BUTTONS</h3>
+						<hr />
+						<div class="row my-4">
+							<div class="col-md-12">
+								<h5>Colors</h5>
+								<button type="button" class="btn btn-primary text-white">Primary</button>
+								<button type="button" class="btn btn-secondary">Secondary</button>
+								<button type="button" class="btn btn-success text-white">Success</button>
+								<button type="button" class="btn btn-danger text-white">Danger</button>
+								<button type="button" class="btn btn-warning">Warning</button>
+								<button type="button" class="btn btn-info">Info</button>
+								<button type="button" class="btn btn-light">Light</button>
+								<button type="button" class="btn btn-dark">Dark</button>
+							</div>
+						</div>
+						<div class="row my-4">
+							<div class="col-md-12">
+								<h5>Button Outline</h5>
+								<button type="button" class="btn btn-outline-primary">Primary</button>
+								<button type="button" class="btn btn-outline-secondary text-dark">Secondary</button>
+								<button type="button" class="btn btn-outline-success">Success</button>
+								<button type="button" class="btn btn-outline-danger">Danger</button>
+								<button type="button" class="btn btn-outline-warning">Warning</button>
+								<button type="button" class="btn btn-outline-info">Info</button>
+								<button type="button" class="btn btn-outline-light">Light</button>
+								<button type="button" class="btn btn-outline-dark">Dark</button>
+							</div>
+						</div>
+						<div class="row my-4">
+							<div class="col-md-4">
+								<h5>Different Tags</h5>
+								<button type="button" class="btn btn-primary text-white">Button</button>
+								<a type="button" class="btn btn-primary text-white">Link</a>
+								<span type="button" class="btn btn-primary text-white">Span</span>
+								<label type="button" class="btn btn-primary text-white">Label</label>
+							</div>
+							<div class="col-md-4">
+								<h5>Disabled</h5>
+								<button type="button" class="btn btn-sm btn-primary text-white" disabled>Button</button>
+								<button type="button" class="btn btn-primary text-white" disabled>Button</button>
+								<button type="button" class="btn btn-lg btn-primary text-white" disabled>Button</button>
+							</div>
+							<div class="col-md-4">
+								<h5>Sizes</h5>
+								<div>
+									<button type="button" class="btn btn-sm btn-primary text-white">Small</button>
+									<button type="button" class="btn btn-primary text-white">Default</button>
+									<button type="button" class="btn btn-lg btn-primary text-white">Large</button>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="mt-5 pt-5">
+						<h3>FORMS</h3>
+						<hr />
+						<div class="row">
+							<div class="col-md-6">
+								<div class="alert alert-danger px-4" role="alert">
+									<i class="fa-solid fa-times-circle fs-5 me-3 text-danger"></i>
+									This is a danger alert! My job is to inform users about unsuccessful events!
+								</div>
+
+								<div class="card shadow-sm bg-white">
+									<div class="card-body">
+										<form class="d-flex flex-column gap-3">
+											<h5>Register as a New User</h5>
+											<input field class="form-control bg-light" type="text" name="Username" placeholder="Username" />
+											<input field class="form-control bg-light is-invalid" type="email" name="Email" placeholder="Email" />
+											<input field class="form-control bg-light is-invalid" type="password" name="Password" placeholder="Password" />
+											<input field class="form-control bg-light" type="password" name="ConfirmPassword" placeholder="Confirm Password" />
+											<select field class="form-select" name="Gender">
+												<option value="M">Male</option>
+												<option value="F">Female</option>
+											</select>
+											<div>
+												<input field type="checkbox" id="RememberMe" name="RememberMe" placeholder="Checkbox" />
+												<label for="RememberMe">Remember me?</label>
+											</div>
+											<div>
+												<button class="btn btn-outline-primary" type="reset">Reset!</button>
+												<button class="btn btn-primary text-white" type="button" onclick="submitForm(this, true)">Submit</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="alert alert-success px-4" role="alert">
+									<i class="fa-solid fa-check-circle me-3 fs-5 text-success"></i>
+									This is a success alert! My job is to inform users about successful event!
+								</div>
+								<div class="alert alert-dark px-4" role="alert">
+									<i class="fa-solid fa-info-circle me-3 fs-5"></i>
+									This is a dark alert! My job is to inform users about everything!
+								</div>
+								<div class="alert alert-info px-4" role="alert">
+									<i class="fa-solid fa-info-circle me-3 fs-5"></i>
+									This is an info alert! My job is to inform users about everything!
+								</div>
+								<div class="alert alert-primary px-4" role="alert">
+									<i class="fa-solid fa-info-circle me-3 fs-5"></i>
+									This is a primary alert! My job is to inform users about everything!
+								</div>
+								<div class="alert alert-warning px-4" role="alert">
+									<i class="fa-solid fa-warning me-3 fs-5"></i>
+									This is a warning alert! My job is to inform warn users about everything!
+								</div>
+								<div class="card shadow-sm">
+									<div class="card-body">
+										<form class="d-flex flex-column gap-3">
+											<div id="radioWrapper">
+												<h5>Select among the choices</h5>
+												<div>
+													<input type="radio" id="pizza" name="BestFood" value="Pizza" />
+													<label for="pizza">Pizza</label>
+												</div>
+												<div>
+													<input type="radio" id="carbonara" name="BestFood" value="Carbonara" />
+													<label for="carbonara">Carbonara</label>
+												</div>
+												<div>
+													<input type="radio" id="borgor" name="BestFood" value="Borgor" />
+													<label for="borgor">Borgor</label>
+												</div>
+												<input field type="hidden" id="selectedRadio" />
+											</div>
+											<div class="form-floating">
+												<textarea field class="form-control bg-light h-100" placeholder="Leave a Comment here" id="floatingTextarea" name="Comment" rows="10"></textarea>
+												<label for="floatingTextarea">Leave a Comment here</label>
+											</div>
+											<div>
+												<button class="btn btn-secondary shadow-none" type="reset">Cancel</button>
+												<button class="btn btn-primary text-white" type="button" onclick="submitForm(this, true)">Submit</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="mt-5 pt-5">
+						<table class="table table-borderless table-hover w-100" id="DemoTbl">
+							<thead>
+								<th>Nickname</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Contact Number</th>
+								<th>Position</th>
+								<th>Email Address</th>
+								<th>Options</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Gene</td>
+									<td>Johcel Gene</td>
+									<td>Bitara</td>
+									<td>0970 322 4661</td>
+									<td>Software Engineer</td>
+									<td>gene@gmail.com</td>
+									<td class="text-center">
+										<div class="d-flex gap-3">
+											<i class="fa-solid fa-info small"></i>
+											<i class="fa-solid fa-edit small"></i>
+											<i class="fa-solid fa-trash text-danger small"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Axel</td>
+									<td>John Axel</td>
+									<td>Bitara</td>
+									<td>0934 441 6591</td>
+									<td>Employee</td>
+									<td>johnaxel@gmail.com</td>
+									<td class="text-center">
+										<div class="d-flex gap-3">
+											<i class="fa-solid fa-info small"></i>
+											<i class="fa-solid fa-edit small"></i>
+											<i class="fa-solid fa-trash text-danger small"></i>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+				<div class="container mt-5">
+					<footer class="pt-4 my-md-5 pt-md-5 border-top">
+						<div class="row">
+							<div class="col-12 col-md">
+								<img style="max-width: 20rem" src="../assets/svg/icon-logo-full-black.svg" alt="Developer Logo" />
+								<small class="d-block my-3 text-muted"
+									>Copyright © 2022 Gene Bitara (genebit).<br />
+									All Rights Reserved
+								</small>
+							</div>
+							<div class="col-6 mt-3 col-md">
+								<h5>Project Resources</h5>
+								<ul class="list-unstyled text-small">
+									<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">ASP.NET MVC Framework</a></li>
+									<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Figma</a></li>
+									<li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Jquery Plugins</a></li>
+								</ul>
+							</div>
+							<div class="col-6 mt-3 col-md">
+								<h5>Socials</h5>
+								<div class="d-flex gap-3">
+									<a class="text-decoration-none" href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+									<a class="text-decoration-none" href=""><i class="fa-brands fa-github"></i> Github</a>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

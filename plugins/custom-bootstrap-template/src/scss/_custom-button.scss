@@ -1,0 +1,54 @@
+label.btn:active,
+span.btn:active,
+a.btn:active,
+button:active {
+	transform: scale(96%);
+}
+
+.btn {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
+	span {
+		display: block;
+		width: 50px;
+		height: 50px;
+		top: 50%;
+		left: 50%;
+		right: 50%;
+		margin-left: -25px;
+		margin-top: -25px;
+		position: absolute;
+		border-radius: 50%;
+		animation: btn-touch-effect 2s;
+	}
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-success:hover,
+.btn-outline-success:focus,
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+	color: white;
+}
+
+@each $name, $color in $theme-colors {
+	.btn-#{$name} span {
+		background-color: lighten($color, 23%);
+	}
+	.btn-outline-#{$name} span {
+		background-color: lighten($color, 23%);
+	}
+}
+
+@keyframes btn-touch-effect {
+	from {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	to {
+		transform: scale(100);
+		opacity: 0;
+	}
+}

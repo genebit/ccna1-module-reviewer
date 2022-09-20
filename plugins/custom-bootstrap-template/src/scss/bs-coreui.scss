@@ -1,0 +1,57 @@
+// Color theme
+$white: #ffffff;
+$theme-colors: (
+	"light": #f8f8f8,
+	"dark": #101825,
+	"primary": #417efa,
+	"secondary": #e3e3e3,
+	"info": #3d7794,
+	"success": #12b860,
+	"warning": #ffe95a,
+	"danger": #ff443a,
+) !default;
+
+$headings-font-weight: 700;
+// Buttons
+$input-btn-padding-y: 0.375rem !default;
+$input-btn-padding-x: 1.75rem !default;
+$input-btn-focus-width: 0.15 !default;
+$input-btn-focus-color-opacity: 0.15 !default;
+$input-btn-focus-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25) !default;
+
+$input-border-color: rgba(0, 0, 0, 0.015);
+$input-border-width: 0.15rem;
+
+$btn-active-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.125) !default;
+
+$btn-border-radius: 5px !default;
+$btn-border-radius-sm: $btn-border-radius !default;
+$btn-border-radius-lg: $btn-border-radius !default;
+
+$btn-padding-x-sm: 32px;
+$btn-padding-x-lg: 32px;
+
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-sm: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+$box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+
+$card-border-width: 1px;
+$card-border-radius: 5px;
+$card-border-color: rgba(0, 0, 0, 0.035);
+$card-box-shadow: white;
+
+$text-color: rgb(49, 49, 86);
+
+$selection-bg-color: rgba(0, 195, 255, 0.182);
+// BS5
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Components
+@import "coreui-layout";
+@import "scrollbar";
+@import "custom-button";
+@import "typography";
+@import "selection";
