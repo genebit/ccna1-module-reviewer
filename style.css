@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 * {
 	font-family: "Open Sans", sans-serif;
+	scroll-padding-top: 0.5rem;
 }
 .container {
 	max-width: 60rem;
 }
 .sticky-top {
 	top: 0.5rem;
+}
+@media (max-width: 574px) {
+	aside {
+		margin-top: 1rem;
+	}
 }
 multioption * {
 	padding: 1rem;
@@ -15,5 +21,9 @@ multioption * {
 multioption *:hover {
 	cursor: pointer;
 	border: 1px solid #417efa;
-	transform: scale(1.01);
+	transform: scale(1.05);
+}
+#QuestionnaireNavBtnContainer {
+	max-height: 60vh;
+	overflow-y: auto;
 }

@@ -14,6 +14,13 @@ $.ajax({
 	url: "/resources/data.json",
 	dataType: "json",
 	success: function (res) {
+		for (let i = 1; i <= res["QUESTIONS"].length; i++) {
+			let template = $("[questionnaire-item-jump-btn]")[0].content.cloneNode(true).children[0]
+			template.textContent = i
+			template.href = `#${i - 1}`
+			$("#QuestionnaireNavBtnContainer").append(template)
+		}
+
 		const DEFAULT_OPTION_CLASS = "card shadow-sm p-3"
 		let questionnareNumber = 1,
 			k = 1

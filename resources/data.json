@@ -82,6 +82,137 @@
 		{
 			"TITLE": "What is a characteristic of the LLC sublayer?",
 			"ANSWERS": ["It provides the logical addressing required that identifies the device.", "It provides delimitation of data according to the physical signaling requirements of the medium.", "[/] It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.", "It defines software processes that provide services to the physical layer."]
+		},
+		{
+			"TITLE": "What are three ways that media access control is used in networking? (Choose three.)",
+			"ANSWERS": ["[/] Ethernet utilizes CSMA/CD.", "[/] Media access control provides placement of data frames onto the media.", "Contention-based access is also known as deterministic.", "802.11 utilizes CSMA/CD.", "[/] Data link layer protocols define the rules for access to different media.", "Networks with controlled access have reduced performance due to data collisions."]
+		},
+		{
+			"TITLE": "During the encapsulation process, what occurs at the data link layer for a PC connected to an Ethernet network?",
+			"ANSWERS": ["An IP address is added.", "The logical address is added.", "[/] The physical address is added.", "The process port number is added."]
+		},
+		{
+			"TITLE": "What three items are contained in an Ethernet header and trailer? (Choose three.)",
+			"ANSWERS": ["source IP address", "[/] source MAC address", "destination IP address", "[/] destination MAC address", "[/] error-checking information"]
+		},
+		{
+			"TITLE": "What type of communication rule would best describe CSMA/CD?",
+			"ANSWERS": ["[/] access method", "flow control", "message encapsulation", "message encoding"]
+		},
+		{
+			"TITLE": "Which three basic parts are common to all frame types supported by the data link layer? (Choose three.)",
+			"ANSWERS": ["[/] header", "type field", "MTU size", "[/] data", "[/] trailer", "CRC value"]
+		},
+		{
+			"TITLE": "Which statement is true about the CSMA/CD access method that is used in Ethernet?",
+			"ANSWERS": ["When a device hears a carrier signal and transmits, a collision cannot occur.", "A jamming signal causes only devices that caused the collision to execute a backoff algorithm.", "[/] All network devices must listen before transmitting.", "Devices involved in a collision get priority to transmit after the backoff period."]
+		},
+		{
+			"TITLE": "What is the auto-MDIX feature on a switch?",
+			"ANSWERS": ["the automatic configuration of an interface for 10/100/1000 Mb/s operation", "[/] the automatic configuration of an interface for a straight-through or a crossover Ethernet cable connection", "the automatic configuration of full-duplex operation over a single Ethernet copper or optical cable", "the ability to turn a switch interface on or off accordingly if an active connection is detected"]
+		},
+		{
+			"TITLE": "A Layer 2 switch is used to switch incoming frames from a 1000BASE-T port to a port connected to a 100Base-T network. Which method of memory buffering would work best for this task?",
+			"ANSWERS": ["port-based buffering", "level 1 cache buffering", "[/] shared memory buffering", "fixed configuration buffering"]
+		},
+		{
+			"TITLE": "What are two examples of the cut-through switching method? (Choose two.)",
+			"ANSWERS": ["store-and-forward switching", "[/] fast-forward switching", "CRC switching", "[/] fragment-free switching", "QOS switching"]
+		},
+		{
+			"TITLE": "Which frame forwarding method receives the entire frame and performs a CRC check to detect errors before forwarding the frame?",
+			"ANSWERS": ["cut-through switching", "[/] store-and-forward switching", "fragment-free switching", "fast-forward switching"]
+		},
+		{
+			"TITLE": "What is the purpose of the FCS field in a frame?",
+			"ANSWERS": ["to obtain the MAC address of the sending node", "to verify the logical address of the sending node", "to compute the CRC header for the data field", "[/] to determine if errors occurred in the transmission and reception"]
+		},
+		{
+			"TITLE": "Which switching method has the lowest level of latency?",
+			"ANSWERS": ["cut-through", "store-and-forward", "fragment-free", "[/] fast-forward"]
+		},
+		{
+			"TITLE": "A network administrator is connecting two modern switches using a straight-through cable. The switches are new and have never been configured. Which three statements are correct about the final result of the connection? (Choose three.)",
+			"ANSWERS": [
+				"[/] The link between the switches will work at the fastest speed that is supported by both switches.",
+				"[/] The link between switches will work as full-duplex.",
+				"If both switches support different speeds, they will each work at their own fastest speed.",
+				"[/] The auto-MDIX feature will configure the interfaces eliminating the need for a crossover cable.",
+				"The connection will not be possible unless the administrator changes the cable to a crossover cable.",
+				"The duplex capability has to be manually configured because it cannot be negotiated."
+			]
+		},
+		{
+			"TITLE": "Which advantage does the store-and-forward switching method have compared with the cut-through switching method?",
+			"ANSWERS": ["collision detecting", "[/] frame error checking", "faster frame forwarding", "frame forwarding using IPv4 Layer 3 and 4 information"]
+		},
+		{
+			"TITLE": "When the store-and-forward method of switching is in use, what part of the Ethernet frame is used to perform an error check?",
+			"ANSWERS": ["[/] CRC in the trailer", "source MAC address in the header", "destination MAC address in the header", "protocol type in the header"]
+		},
+		{
+			"TITLE": "Which switching method uses the CRC value in a frame?",
+			"ANSWERS": ["cut-through", "fast-forward", "fragment-free", "[/] store-and-forward"]
+		},
+		{
+			"TITLE": "What are two actions performed by a Cisco switch? (Choose two.)",
+			"ANSWERS": ["building a routing table that is based on the first IP address in the frame header", "[/] using the source MAC addresses of frames to build and maintain a MAC address table", "forwarding frames with unknown destination IP addresses to the default gateway", "[/] utilizing the MAC address table to forward frames via the destination MAC address", "examining the destination MAC address to add new entries to the MAC address table"]
+		},
+		{
+			"TITLE": "Which two statements describe features or functions of the logical link control sublayer in Ethernet standards? (Choose two.)",
+			"ANSWERS": ["[/] Logical link control is implemented in software.", "Logical link control is specified in the IEEE 802.3 standard.", "The LLC sublayer adds a header and a trailer to the data.", "[/] The data link layer uses LLC to communicate with the upper layers of the protocol suite.", "The LLC sublayer is responsible for the placement and retrieval of frames on and off the media."]
+		},
+		{
+			"TITLE": "What is the auto-MDIX feature?",
+			"ANSWERS": ["[/] It enables a device to automatically configure an interface to use a straight-through or a crossover cable.", "It enables a device to automatically configure the duplex settings of a segment.", "It enables a device to automatically configure the speed of its interface.", "It enables a switch to dynamically select the forwarding method."]
+		},
+		{
+			"TITLE": "What is one advantage of using the cut-through switching method instead of the store-and-forward switching method?",
+			"ANSWERS": ["has a positive impact on bandwidth by dropping most of the invalid frames", "makes a fast forwarding decision based on the source MAC address of the frame", "[/] has a lower latency appropriate for high-performance computing applications​", "provides the flexibility to support any mix of Ethernet speeds"]
+		},
+		{
+			"TITLE": "Which is a multicast MAC address?",
+			"ANSWERS": ["FF-FF-FF-FF-FF-FF", "5C-26-0A-4B-19-3E", "[/] 01-00-5E-00-00-03", "00-26-0F-4B-00-3E"]
+		},
+		{
+			"TITLE": "What does the term “attenuation” mean in data communication?",
+			"ANSWERS": ["[/] loss of signal strength as distance increases", "time for a signal to reach its destination", "leakage of signals from one cable pair to another", "strengthening of a signal by a networking device"]
+		},
+		{
+			"TITLE": "What makes fiber preferable to copper cabling for interconnecting buildings? (Choose three.)",
+			"ANSWERS": ["[/] greater distances per cable run", "lower installation cost", "[/] limited susceptibility to EMI/RFI", "durable connections", "[/] greater bandwidth potential", "easily terminated"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the process by which one wave modifies another wave?",
+			"ANSWERS": ["[/] modulation", "IEEE", "EIA/TIA", "air"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the capacity at which a medium can carry data?",
+			"ANSWERS": ["[/] bandwidth", "IEEE", "EIA/TIA", "air"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the measure of the transfer of bits across a medium over a given period of time?",
+			"ANSWERS": ["[/] throughput", "bandwidth", "latency", "goodput"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the amount of time, including delays, for data to travel from one point to another?",
+			"ANSWERS": ["[/] latency", "bandwidth", "throughput", "goodput"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the measure of usable data transferred over a given period of time?",
+			"ANSWERS": ["[/] goodput", "fiber-optic cable", "air", "copper cable"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the physical medium which uses electrical pulses?",
+			"ANSWERS": ["[/] copper cable", "fiber-optic cable", "air", "goodput"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the physical medium that uses the propagation of light?",
+			"ANSWERS": ["[/] fiber-optic cable", "goodput", "latency", "throughput"]
+		},
+		{
+			"TITLE": "What OSI physical layer term describes the physical medium for microwave transmissions?",
+			"ANSWERS": ["[/] air", "goodput", "latency", "throughput"]
 		}
 	]
 }
