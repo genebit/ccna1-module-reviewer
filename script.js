@@ -14,18 +14,20 @@ $.ajax({
 	url: "/resources/data.json",
 	dataType: "json",
 	success: function (res) {
-		for (let i = 1; i <= res["QUESTIONS"].length; i++) {
-			let template = $("[questionnaire-item-jump-btn]")[0].content.cloneNode(true).children[0]
-			template.textContent = i
-			template.href = `#${i - 1}`
-			$("#QuestionnaireNavBtnContainer").append(template)
-		}
-
+		const QUESTIONNAIRE_SIZE = res["QUESTIONS"].length
 		const DEFAULT_OPTION_CLASS = "card shadow-sm p-3"
 		let questionnareNumber = 1,
 			k = 1
 
-		for (let i = 0; i < res["QUESTIONS"].length; i++) {
+		for (let i = 1; i <= QUESTIONNAIRE_SIZE; i++) {
+			let template = $("[questionnaire-item-jump-btn]")[0].content.cloneNode(true).children[0]
+			template.textContent = i
+			template.href = `#${i - 1}`
+			template.id = `NavItem-${i}`
+			$("#QuestionnaireNavBtnContainer").append(template)
+		}
+
+		for (let i = 0; i < QUESTIONNAIRE_SIZE; i++) {
 			let title = res["QUESTIONS"][i].TITLE
 			let answers = []
 
@@ -59,11 +61,25 @@ $.ajax({
 		}
 
 		$("multioption *").click(function () {
-			$(this).toggleClass("alert alert-primary m-0")
+			$(this).toggleClass(`${DEFAULT_OPTION_CLASS} alert alert-primary m-0`)
+
+			let hasAnswers = false
+			$(this)
+				.closest("multioption")
+				.children()
+				.each(function (i, element) {
+					if ($(element.tagName).hasClass("alert")) {
+						hasAnswers = true
+						return
+					}
+				})
+
+			let id = $(this).closest("card").attr("id")
+			hasAnswers ? $(`#NavItem-${parseInt(id) + 1}`).addClass("active") : $(`#NavItem-${parseInt(id) + 1}`).removeClass("active")
 		})
 
 		$("#ShowAnswersBtn").click(function () {
-			for (let i = 0; i < res["QUESTIONS"].length; i++) {
+			for (let i = 0; i < QUESTIONNAIRE_SIZE; i++) {
 				let correctAnswers = getCorrectAnswers(res, i)
 
 				// checking if the form's <option> innerHTML is the same to the correct answer
@@ -83,5 +99,8 @@ $.ajax({
 		$("#ResetBtn").click(function () {
 			$("multioption *").removeClass().addClass(DEFAULT_OPTION_CLASS)
 		})
+	},
+	error: function () {
+		$("#ErrorModal").modal("show")
 	},
 })
