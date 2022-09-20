@@ -1,185 +1,87 @@
 {
-    "QUESTIONS": [
-        {
-            "TITLE": "What is the purpose of the OSI physical layer?",
-            "ANSWERS": [
-                "controlling access to media",
-                "[/] transmitting bits across the local media",
-                "performing error detection on received frames",
-                "exchanging frames between nodes over physical network media"
-            ]
-        },
-        {
-            "TITLE": "Why are two strands of fiber used for a single fiber optic connection?",
-            "ANSWERS": [
-                "The two strands allow the data to travel for longer distances without degrading.",
-                "They prevent crosstalk from causing interference on the connection.",
-                "They increase the speed at which the data can travel.",
-                "[/] They allow for full-duplex connectivity."
-            ]
-        },
-        {
-            "TITLE": "Which characteristic describes crosstalk?",
-            "ANSWERS": [
-                "the distortion of the network signal from fluorescent lighting",
-                "[/] the distortion of the transmitted messages from signals carried in adjacent wires",
-                "the weakening of the network signal over long cable lengths",
-                "the loss of wireless signal over excessive distance from the access point"
-            ]
-        },
-        {
-            "TITLE": "Which procedure is used to reduce the effect of crosstalk in copper cables?",
-            "ANSWERS": [
-                "requiring proper grounding connections",
-                "[/] twisting opposing circuit wire pairs together",
-                "wrapping the bundle of wires with metallic shielding",
-                "designing a cable infrastructure to avoid crosstalk interference",
-                "avoiding sharp bends during installation"
-            ]
-        },
-        {
-            "TITLE": "A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
-            "ANSWERS": [
-                "[/] the amount of traffic that is currently crossing the network",
-                "the sophistication of the encapsulation method applied to the data",
-                "[/] the type of traffic that is crossing the network",
-                "[/] the latency that is created by the number of network devices that the data is crossing",
-                "the bandwidth of the WAN connection to the Internet",
-                "the reliability of the gigabit Ethernet infrastructure of the backbone"
-            ]
-        },
-        {
-            "TITLE": "What are two characteristics of fiber-optic cable? (Choose two.)",
-            "ANSWERS": [
-                "[/] It is not affected by EMI or RFI.",
-                "Each pair of cables is wrapped in metallic foil.",
-                "It combines the technique of cancellation, shielding, and twisting to protect data.",
-                "It typically contains 4 pairs of fiber-optic wires.",
-                "[/] It is more expensive than UTP cabling is."
-            ]
-        },
-        {
-            "TITLE": "What is a primary role of the Physical layer in transmitting data on the network?",
-            "ANSWERS": [
-                "[/] create the signals that represent the bits in each frame on to the media",
-                "provide physical addressing to the devices",
-                "determine the path packets take through the network",
-                "control data access to the media"
-            ]
-        },
-        {
-            "TITLE": "With the use of unshielded twisted-pair copper wire in a network, what causes crosstalk within the cable pairs?",
-            "ANSWERS": [
-                "[/] the magnetic field around the adjacent pairs of wire",
-                "the use of braided wire to shield the adjacent wire pairs",
-                "the reflection of the electrical wave back from the far end of the cable",
-                "the collision caused by two nodes trying to use the media simultaneously"
-            ]
-        },
-        {
-            "TITLE": "In addition to the cable length, what two factors could interfere with the communication carried over UTP cables? (Choose two.)",
-            "ANSWERS": [
-                "[/] crosstalk",
-                "bandwidth",
-                "size of the network",
-                "signal modulation technique",
-                "[/] electromagnetic interference"
-            ]
-        },
-        {
-            "TITLE": "Which two devices commonly affect wireless networks? (Choose two.)",
-            "ANSWERS": [
-                "Blu-ray players",
-                "home theaters",
-                "[/] cordless phones",
-                "[/] microwaves",
-                "incandescent light bulbs",
-                "external hard drives"
-            ]
-        },
-        {
-            "TITLE": "Which two statements describe the services provided by the data link layer? (Choose two.)",
-            "ANSWERS": [
-                "It defines the end-to-end delivery addressing scheme.",
-                "It maintains the path between the source and destination devices during the data transmission.",
-                "[/] It manages the access of frames to the network media.",
-                "It provides reliable delivery through link establishment and flow control.",
-                "It ensures that application data will be transmitted according to the prioritization.",
-                "[/] It packages various Layer 3 PDUs into a frame format that is compatible with the network interface."
-            ]
-        },
-        {
-            "TITLE": "What is the function of the CRC value that is found in the FCS field of a frame?",
-            "ANSWERS": [
-                "[/] to verify the integrity of the received frame",
-                "to verify the physical address in the frame",
-                "to verify the logical address in the frame",
-                "to compute the checksum header for the data field in the frame"
-            ]
-        },
-        {
-            "TITLE": "What is contained in the trailer of a data-link frame?",
-            "ANSWERS": [
-                "logical address",
-                "physical address",
-                "data",
-                "[/] error detection"
-            ]
-        },
-        {
-            "TITLE": "Which statement describes a characteristic of the frame header fields of the data link layer?",
-            "ANSWERS": [
-                "They all include the flow control and logical connection fields.",
-                "Ethernet frame header fields contain Layer 3 source and destination addresses.",
-                "[/] They vary depending on protocols.",
-                "They include information on user applications"
-            ]
-        },
-        {
-            "TITLE": "A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?",
-            "ANSWERS": [
-                "mesh",
-                "[/] partial mesh",
-                "hub and spoke",
-                "point-to-point"
-            ]
-        },
-        {
-            "TITLE": "Which two fields or features does Ethernet examine to determine if a received frame is passed to the data link layer or discarded by the NIC? (Choose two.)",
-            "ANSWERS": [
-                "auto-MDIX",
-                "CEF",
-                "[/] Frame Check Sequence",
-                "[/] minimum frame size",
-                "source MAC address"
-            ]
-        },
-        {
-            "TITLE": "Which media communication type does not require media arbitration in the data link layer?",
-            "ANSWERS": [
-                "deterministic",
-                "half-duplex",
-                "[/] full-duplex",
-                "controlled access"
-            ]
-        },
-        {
-            "TITLE": "Which statement describes an extended star topology?",
-            "ANSWERS": [
-                "[/] End devices connect to a central intermediate device, which in turn connects to other central intermediate devices.",
-                "End devices are connected together by a bus and each bus connects to a central intermediate device.",
-                "Each end system is connected to its respective neighbor via an intermediate device.",
-                "All end and intermediate devices are connected in a chain to each other."
-            ]
-        },
-        {
-            "TITLE": "What is a characteristic of the LLC sublayer?",
-            "ANSWERS": [
-                "It provides the logical addressing required that identifies the device.",
-                "It provides delimitation of data according to the physical signaling requirements of the medium.",
-                "[/] It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.",
-                "It defines software processes that provide services to the physical layer."
-            ]
-        }
-    ]
+	"QUESTIONS": [
+		{
+			"TITLE": "What is the purpose of the OSI physical layer?",
+			"ANSWERS": ["controlling access to media", "[/] transmitting bits across the local media", "performing error detection on received frames", "exchanging frames between nodes over physical network media"]
+		},
+		{
+			"TITLE": "Why are two strands of fiber used for a single fiber optic connection?",
+			"ANSWERS": ["The two strands allow the data to travel for longer distances without degrading.", "They prevent crosstalk from causing interference on the connection.", "They increase the speed at which the data can travel.", "[/] They allow for full-duplex connectivity."]
+		},
+		{
+			"TITLE": "Which characteristic describes crosstalk?",
+			"ANSWERS": ["the distortion of the network signal from fluorescent lighting", "[/] the distortion of the transmitted messages from signals carried in adjacent wires", "the weakening of the network signal over long cable lengths", "the loss of wireless signal over excessive distance from the access point"]
+		},
+		{
+			"TITLE": "Which procedure is used to reduce the effect of crosstalk in copper cables?",
+			"ANSWERS": ["requiring proper grounding connections", "[/] twisting opposing circuit wire pairs together", "wrapping the bundle of wires with metallic shielding", "designing a cable infrastructure to avoid crosstalk interference", "avoiding sharp bends during installation"]
+		},
+		{
+			"TITLE": "A network administrator is measuring the transfer of bits across the company backbone for a mission critical financial application. The administrator notices that the network throughput appears lower than the bandwidth expected. Which three factors could influence the differences in throughput? (Choose three.)",
+			"ANSWERS": ["[/] the amount of traffic that is currently crossing the network", "the sophistication of the encapsulation method applied to the data", "[/] the type of traffic that is crossing the network", "[/] the latency that is created by the number of network devices that the data is crossing", "the bandwidth of the WAN connection to the Internet", "the reliability of the gigabit Ethernet infrastructure of the backbone"]
+		},
+		{
+			"TITLE": "What are two characteristics of fiber-optic cable? (Choose two.)",
+			"ANSWERS": ["[/] It is not affected by EMI or RFI.", "Each pair of cables is wrapped in metallic foil.", "It combines the technique of cancellation, shielding, and twisting to protect data.", "It typically contains 4 pairs of fiber-optic wires.", "[/] It is more expensive than UTP cabling is."]
+		},
+		{
+			"TITLE": "What is a primary role of the Physical layer in transmitting data on the network?",
+			"ANSWERS": ["[/] create the signals that represent the bits in each frame on to the media", "provide physical addressing to the devices", "determine the path packets take through the network", "control data access to the media"]
+		},
+		{
+			"TITLE": "With the use of unshielded twisted-pair copper wire in a network, what causes crosstalk within the cable pairs?",
+			"ANSWERS": ["[/] the magnetic field around the adjacent pairs of wire", "the use of braided wire to shield the adjacent wire pairs", "the reflection of the electrical wave back from the far end of the cable", "the collision caused by two nodes trying to use the media simultaneously"]
+		},
+		{
+			"TITLE": "In addition to the cable length, what two factors could interfere with the communication carried over UTP cables? (Choose two.)",
+			"ANSWERS": ["[/] crosstalk", "bandwidth", "size of the network", "signal modulation technique", "[/] electromagnetic interference"]
+		},
+		{
+			"TITLE": "Which two devices commonly affect wireless networks? (Choose two.)",
+			"ANSWERS": ["Blu-ray players", "home theaters", "[/] cordless phones", "[/] microwaves", "incandescent light bulbs", "external hard drives"]
+		},
+		{
+			"TITLE": "Which two statements describe the services provided by the data link layer? (Choose two.)",
+			"ANSWERS": [
+				"It defines the end-to-end delivery addressing scheme.",
+				"It maintains the path between the source and destination devices during the data transmission.",
+				"[/] It manages the access of frames to the network media.",
+				"It provides reliable delivery through link establishment and flow control.",
+				"It ensures that application data will be transmitted according to the prioritization.",
+				"[/] It packages various Layer 3 PDUs into a frame format that is compatible with the network interface."
+			]
+		},
+		{
+			"TITLE": "What is the function of the CRC value that is found in the FCS field of a frame?",
+			"ANSWERS": ["[/] to verify the integrity of the received frame", "to verify the physical address in the frame", "to verify the logical address in the frame", "to compute the checksum header for the data field in the frame"]
+		},
+		{
+			"TITLE": "What is contained in the trailer of a data-link frame?",
+			"ANSWERS": ["logical address", "physical address", "data", "[/] error detection"]
+		},
+		{
+			"TITLE": "Which statement describes a characteristic of the frame header fields of the data link layer?",
+			"ANSWERS": ["They all include the flow control and logical connection fields.", "Ethernet frame header fields contain Layer 3 source and destination addresses.", "[/] They vary depending on protocols.", "They include information on user applications"]
+		},
+		{
+			"TITLE": "A network team is comparing physical WAN topologies for connecting remote sites to a headquarters building. Which topology provides high availability and connects some, but not all, remote sites?",
+			"ANSWERS": ["mesh", "[/] partial mesh", "hub and spoke", "point-to-point"]
+		},
+		{
+			"TITLE": "Which two fields or features does Ethernet examine to determine if a received frame is passed to the data link layer or discarded by the NIC? (Choose two.)",
+			"ANSWERS": ["auto-MDIX", "CEF", "[/] Frame Check Sequence", "[/] minimum frame size", "source MAC address"]
+		},
+		{
+			"TITLE": "Which media communication type does not require media arbitration in the data link layer?",
+			"ANSWERS": ["deterministic", "half-duplex", "[/] full-duplex", "controlled access"]
+		},
+		{
+			"TITLE": "Which statement describes an extended star topology?",
+			"ANSWERS": ["[/] End devices connect to a central intermediate device, which in turn connects to other central intermediate devices.", "End devices are connected together by a bus and each bus connects to a central intermediate device.", "Each end system is connected to its respective neighbor via an intermediate device.", "All end and intermediate devices are connected in a chain to each other."]
+		},
+		{
+			"TITLE": "What is a characteristic of the LLC sublayer?",
+			"ANSWERS": ["It provides the logical addressing required that identifies the device.", "It provides delimitation of data according to the physical signaling requirements of the medium.", "[/] It places information in the frame allowing multiple Layer 3 protocols to use the same network interface and media.", "It defines software processes that provide services to the physical layer."]
+		}
+	]
 }

@@ -1,12 +1,15 @@
 .container {
-    max-width: 50rem;
+	max-width: 60rem;
 }
-multioption option {
-    padding: 1rem;
-    transition: all 100ms ease-in-out;
+.sticky-top {
+	top: 0.5rem;
 }
-multioption option:hover {
-    cursor: pointer;
-    border: 1px solid rgb(67, 64, 255);
-    transform: scale(1.01);
+multioption * {
+	padding: 1rem;
+	transition: all 100ms ease-in-out;
+}
+multioption *:hover {
+	cursor: pointer;
+	border: 1px solid rgb(67, 64, 255);
+	transform: scale(1.01);
 }

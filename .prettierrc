@@ -1,4 +1,7 @@
 {
-    "arrayExpand": true,
-    "tabWidth": 4
+	"arrayExpand": true,
+	"tabWidth": 4,
+	"useTabs": true,
+	"semi": false,
+	"printWidth": 500
 }
