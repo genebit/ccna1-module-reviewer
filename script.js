@@ -98,6 +98,10 @@ $.ajax({
 
 		$("#ResetBtn").click(function () {
 			$("multioption *").removeClass().addClass(DEFAULT_OPTION_CLASS)
+
+			for (let i = 1; i <= QUESTIONNAIRE_SIZE; i++) {
+				$(`#NavItem-${i}`).removeClass("active")
+			}
 		})
 	},
 	error: function () {
