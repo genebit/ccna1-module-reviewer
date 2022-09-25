@@ -1,5 +1,5 @@
-var failSfx = new Audio("assets/failed-sfx.mp3")
-var passSfx = new Audio("assets/passed-sfx.mp3")
+const failSfx = new Audio("assets/failed-sfx.mp3")
+const passSfx = new Audio("assets/passed-sfx.mp3")
 
 function shuffleOptions(options) {
 	for (let i = options.length - 1; i > 0; i--) {

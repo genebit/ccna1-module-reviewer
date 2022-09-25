@@ -213,6 +213,34 @@
 		{
 			"TITLE": "What OSI physical layer term describes the physical medium for microwave transmissions?",
 			"ANSWERS": ["[/] air", "goodput", "latency", "throughput"]
+		},
+		{
+			"TITLE": "What action will occur if a switch receives a frame with the destination MAC address FF:FF:FF:FF:FF:FF?",
+			"ANSWERS": ["[/] The switch forwards it out all ports except the ingress port.", "The switch shares the MAC address table entry with any connected sw,itches.", "The switch does not forward the frame.", "The switch sends the frame to a connected router because the destination MAC address is not local."]
+		},
+		{
+			"TITLE": "What action will occur if a switch receives a frame with the destination MAC address 01:00:5E:00:00:D9?",
+			"ANSWERS": ["[/] The switch forwards it out all ports except the ingress port.", "The switch does not forward the frame.", "The switch sends the frame to a connected router because the destination MAC address is not local.", "The switch shares the MAC address table entry with any connected switches."]
+		},
+		{
+			"TITLE": "What action will occur if a host receives a frame with a destination MAC address of FF:FF:FF:FF:FF:FF?",
+			"ANSWERS": ["[/] The host will process the frame.", "The host forwards the frame to the rou,ter.", "The host sends the frame to the switch to update the MAC address table.", "The host forwards the frame to all other hosts."]
+		},
+		{
+			"TITLE": "What action will occur if a switch receives a frame and does have the source MAC address in the MAC table?",
+			"ANSWERS": ["[/] The switch refreshes the timer on that entry.", "The switch adds it to its MAC address table associa,ted with the port number.", "The switch forwards the frame to the associated port.", "The switch sends the frame to a connected router because the destination MAC address is not local."]
+		},
+		{
+			"TITLE": "What action will occur if a host receives a frame with a destination MAC address of FF:FF:FF:FF:FF:FF?",
+			"ANSWERS": ["[/] The host will process the frame.", "The host returns the frame to the swit,ch.", "The host replies to the switch with its own IP address.", "The host forwards the frame to all other hosts."]
+		},
+		{
+			"TITLE": "What action will occur if a host receives a frame with a destination MAC address it does not recognize?",
+			"ANSWERS": ["[/] The host will discard the frame.", "The host replies to the switch with it,s own IP address.", "The host forwards the frame to all other hosts.", "The host returns the frame to the switch."]
+		},
+		{
+			"TITLE": "Which type of UTP cable is used to connect a PC to a switch port?",
+			"ANSWERS": ["console", "rollover", "crossover", "[/] straight-through"]
 		}
 	]
 }
