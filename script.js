@@ -133,7 +133,7 @@ $.ajax({
 				if (correct.length === getTotalAnswers(res, i)) score++
 			})
 
-			let percentageScore = (score / QUESTIONNAIRE_SIZE) * 100
+			let percentageScore = Math.ceil((score / QUESTIONNAIRE_SIZE) * 100)
 			$("total-score").html(score)
 			$("percentage-score").html(`${percentageScore}%`)
 
