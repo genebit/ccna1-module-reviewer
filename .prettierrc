@@ -3,5 +3,6 @@
 	"tabWidth": 4,
 	"useTabs": true,
 	"semi": false,
-	"printWidth": 500
+	"printWidth": 500,
+	"prettier.disableLanguages": ["json"]
 }

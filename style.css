@@ -4,7 +4,7 @@
 	scroll-padding-top: 0.5rem;
 }
 .container {
-	max-width: 60rem;
+	max-width: 80rem;
 }
 .sticky-top {
 	top: 0.5rem;
@@ -24,6 +24,6 @@ multioption *:hover {
 	transform: scale(1.05);
 }
 #QuestionnaireNavBtnContainer {
-	max-height: 60vh;
+	max-height: 50vh;
 	overflow-y: auto;
 }

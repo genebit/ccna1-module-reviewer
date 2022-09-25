@@ -45,7 +45,31 @@
 
 		<main class="container py-5">
 			<div class="row">
-				<content class="col-md-9 d-flex flex-column gap-3">
+				<div class="col-md-3 text-center">
+					<div class="sticky-top d-flex flex-column gap-3">
+						<div class="card bg-white shadow-sm" style="outline: 1px solid rgba(0, 0, 0, 0.45)">
+							<div class="card-body">
+								<score-info>
+									<section>
+										<i class="fa fa-solid fa-check display-1 mb-2"></i>
+									</section>
+									<section>
+										<h3>
+											<percentage-score> 0% </percentage-score>
+										</h3>
+										<hr />
+										<b>
+											<span>You scored a total of </span>
+											<br />
+											<total-score>?</total-score>/<total-items>0</total-items>
+										</b>
+									</section>
+								</score-info>
+							</div>
+						</div>
+					</div>
+				</div>
+				<content class="col-md-6 d-flex flex-column gap-3">
 					<template questionnaire-card>
 						<card class="card bg-white shadow-sm" style="outline: 1px solid rgba(0, 0, 0, 0.45)">
 							<header class="card-header p-5">
@@ -59,19 +83,24 @@
 				</content>
 				<aside class="col-md-3">
 					<div class="sticky-top">
-						<div class="d-flex flex-column gap-1">
-							<div>
-								<small class="text-muted fw-bold">Navigate</small>
-								<hr />
-								<nav id="QuestionnaireNavBtnContainer" class="d-grid gap-1" style="grid-template-columns: repeat(2, 1fr)">
-									<template questionnaire-item-jump-btn>
-										<a id="" href="" class="btn btn-sm btn-outline-dark opacity-75"></a>
-									</template>
-								</nav>
-								<hr />
+						<div class="card" style="outline: 1px solid rgba(0, 0, 0, 0.45)">
+							<div class="card-body">
+								<div class="d-flex flex-column gap-1 mt-3">
+									<div>
+										<small class="text-muted fw-bold">Navigate</small>
+										<hr />
+										<nav id="QuestionnaireNavBtnContainer" class="d-grid gap-1" style="grid-template-columns: repeat(2, 1fr)">
+											<template questionnaire-item-jump-btn>
+												<a id="" href="" class="btn btn-sm btn-outline-dark opacity-75"></a>
+											</template>
+										</nav>
+										<hr />
+									</div>
+									<button type="button" id="CheckAnswersBtn" class="btn btn-primary text-white">Check Answers</button>
+									<button type="button" id="ShowAnswersBtn" class="btn btn-outline-primary">Show Answers</button>
+									<button type="button" id="ResetBtn" class="btn btn-outline-primary">Reset</button>
+								</div>
 							</div>
-							<button type="button" id="ShowAnswersBtn" class="btn btn-primary text-white">Check Answers</button>
-							<button type="button" id="ResetBtn" class="btn btn-outline-primary">Reset</button>
 						</div>
 					</div>
 				</aside>

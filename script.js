@@ -1,3 +1,13 @@
+var failSfx = new Audio("assets/failed-sfx.mp3")
+var passSfx = new Audio("assets/passed-sfx.mp3")
+
+function shuffleOptions(options) {
+	for (let i = options.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1))
+		;[options[i], options[j]] = [options[j], options[i]]
+	}
+}
+
 function getCorrectAnswers(res, index) {
 	let correctAnswers = []
 	res["QUESTIONS"][index].ANSWERS.forEach((element) => {
@@ -10,6 +20,17 @@ function getCorrectAnswers(res, index) {
 	return correctAnswers
 }
 
+function getTotalAnswers(res, index) {
+	let total = 0
+	res["QUESTIONS"][index].ANSWERS.forEach((element) => {
+		// if the word correct exist
+		if (element.includes("[/]")) {
+			total++
+		}
+	})
+	return total
+}
+
 $.ajax({
 	dataType: "json",
 	url: "resources/data.json",
@@ -18,6 +39,8 @@ $.ajax({
 		const DEFAULT_OPTION_CLASS = "card shadow-sm p-3"
 		let questionnareNumber = 1,
 			k = 1
+
+		$("total-items").html(QUESTIONNAIRE_SIZE)
 
 		for (let i = 1; i <= QUESTIONNAIRE_SIZE; i++) {
 			let template = $("[questionnaire-item-jump-btn]")[0].content.cloneNode(true).children[0]
@@ -32,10 +55,14 @@ $.ajax({
 			let answers = []
 
 			res["QUESTIONS"][i].ANSWERS.forEach((element) => {
-				if (element.includes("[/]")) element = element.substring(element.search("[/]") + "[/]".length, element.length)
+				if (element.includes("[/]")) {
+					element = element.substring(element.search("[/]") + "[/]".length, element.length)
+				}
 
 				answers.push(element)
 			})
+
+			shuffleOptions(answers)
 
 			// creating instances of the questionnare cards
 			let template = $("[questionnaire-card]")[0].content.cloneNode(true).children[0]
@@ -61,6 +88,10 @@ $.ajax({
 		}
 
 		$("multioption *").click(function () {
+			// toggle mark selected option
+			if (!$(this).attr("selected")) $(this)[0].setAttribute("selected", "")
+			else $(this)[0].removeAttribute("selected", "")
+
 			$(this).toggleClass(`${DEFAULT_OPTION_CLASS} alert alert-primary m-0`)
 
 			let hasAnswers = false
@@ -76,6 +107,49 @@ $.ajax({
 
 			let id = $(this).closest("card").attr("id")
 			hasAnswers ? $(`#NavItem-${parseInt(id) + 1}`).addClass("active") : $(`#NavItem-${parseInt(id) + 1}`).removeClass("active")
+		})
+
+		$("#CheckAnswersBtn").click(function () {
+			let score = 0
+
+			$("form").each(function (i, form) {
+				let selectedAnswers = []
+				let correctAnswers = getCorrectAnswers(res, i)
+
+				$(`card#${$(this).closest("card").attr("id")} [selected]`).each(function (i, e) {
+					selectedAnswers.push(e.textContent)
+				})
+
+				let correct = []
+				for (let i = 0; i < selectedAnswers.length; i++) {
+					for (let j = 0; j < correctAnswers.length; j++) {
+						if (selectedAnswers[i] === correctAnswers[j]) {
+							correct.push(true)
+							continue
+						}
+						correct.push(true)
+					}
+				}
+				if (correct.length === getTotalAnswers(res, i)) score++
+			})
+
+			let percentageScore = (score / QUESTIONNAIRE_SIZE) * 100
+			$("total-score").html(score)
+			$("percentage-score").html(`${percentageScore}%`)
+
+			if (percentageScore >= 75) {
+				$("score-info i.fa").removeClass().addClass("fa fa-solid fa-check display-1 mb-2 text-success")
+				$("score-info b span").html("You passed! You got a total of ")
+				$("score-info percentage-score, score-info total-score, score-info total-items, score-info b").removeClass().addClass("text-success")
+
+				passSfx.play()
+			} else {
+				$("score-info i.fa").removeClass().addClass("fa fa-solid fa-frown display-1 mb-2 text-danger")
+				$("score-info b span").html("You failed! You got a total of ")
+				$("score-info percentage-score, score-info total-score, score-info total-items, score-info b").removeClass().addClass("text-danger")
+
+				failSfx.play()
+			}
 		})
 
 		$("#ShowAnswersBtn").click(function () {
@@ -98,6 +172,12 @@ $.ajax({
 
 		$("#ResetBtn").click(function () {
 			$("multioption *").removeClass().addClass(DEFAULT_OPTION_CLASS)
+
+			$("score-info i.fa").removeClass().addClass("fa fa-solid fa-check display-1 mb-2")
+			$("score-info b span").html("You got a total of ")
+			$("score-info percentage-score, score-info total-score, score-info total-items, score-info b").removeClass("text-success text-danger")
+			$("score-info percentage-score").html(`${0}%`)
+			$("score-info total-score").html("?")
 
 			for (let i = 1; i <= QUESTIONNAIRE_SIZE; i++) {
 				$(`#NavItem-${i}`).removeClass("active")
