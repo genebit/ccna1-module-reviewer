@@ -127,9 +127,9 @@ $.ajax({
 							correct.push(true)
 							continue
 						}
-						correct.push(true)
 					}
 				}
+				// console.log(selectedAnswers, correct, correctAnswers) debug
 				if (correct.length === getTotalAnswers(res, i)) score++
 			})
 
@@ -172,6 +172,7 @@ $.ajax({
 
 		$("#ResetBtn").click(function () {
 			$("multioption *").removeClass().addClass(DEFAULT_OPTION_CLASS)
+			$("multioption *").removeAttr("selected")
 
 			$("score-info i.fa").removeClass().addClass("fa fa-solid fa-check display-1 mb-2")
 			$("score-info b span").html("You got a total of ")
