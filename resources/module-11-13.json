@@ -1,0 +1,240 @@
+{
+	"QUESTIONS": [
+		{
+			"TITLE": "What is the prefix length notation for the subnet mask 255.255.255.224?",
+			"ANSWERS": ["/25", "/26", "[/] /27", "/28"]
+		},
+		{
+			"TITLE": "How many valid host addresses are available on an IPv4 subnet that is configured with a /26 mask?",
+			"ANSWERS": ["254", "190", "192", "[/] 62", "64"]
+		},
+		{
+			"TITLE": "Which subnet mask would be used if 5 host bits are available?",
+			"ANSWERS": ["255.255.255.0", "255.255.255.128", "[/] 255.255.255.224", "255.255.255.240"]
+		},
+		{
+			"TITLE": "A network administrator subnets the 192.168.10.0/24 network into subnets with /26 masks. How many equal-sized subnets are created?",
+			"ANSWERS": ["1", "2", "[/] 4", "8", "16", "64"]
+		},
+		{
+			"TITLE": "An administrator wants to create four subnetworks from the network address 192.168.1.0/24. What is the network address and subnet mask of the second useable subnet?",
+			"ANSWERS": ["[/] subnetwork 192.168.1.64 subnet mask 255.255.255.192", "subnetwork 192.168.1.32 subnet mask 255.255.255.240", "subnetwork 192.168.1.64 subnet mask 255.255.255.240", "subnetwork 192.168.1.128 subnet mask 255.255.255.192", "subnetwork 192.168.1.8 subnet mask 255.255.255.224"]
+		},
+		{
+			"TITLE": "How many bits must be borrowed from the host portion of an address to accommodate a router with five connected networks?",
+			"ANSWERS": ["two", "[/] three", "four", "five"]
+		},
+		{
+			"TITLE": "How many host addresses are available on the 192.168.10.128/26 network?",
+			"ANSWERS": ["30", "32", "60", "[/] 62", "64"]
+		},
+		{
+			"TITLE": "How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?",
+			"ANSWERS": ["510", "512", "[/] 1022", "1024", "2046", "2048"]
+		},
+		{
+			"TITLE": "What three blocks of addresses are defined by RFC 1918 for private network use? (Choose three.)",
+			"ANSWERS": ["[/] 10.0.0.0/8", "[/] 172.16.0.0/12", "[/] 192.168.0.0/16", "100.64.0.0/14", "169.254.0.0/16", "239.0.0.0/8"]
+		},
+		{
+			"TITLE": "A site administrator has been told that a particular network at the site must accommodate 126 hosts. Which subnet mask would be used that contains the required number of host bits?",
+			"ANSWERS": ["255.255.255.0", "[/] 255.255.255.128", "255.255.255.224", "255.255.255.240"]
+		},
+		{
+			"TITLE": "What is the usable number of host IP addresses on a network that has a /26 mask?",
+			"ANSWERS": ["256", "254", "64", "[/] 62", "32", "16"]
+		},
+		{
+			"TITLE": "Which address prefix range is reserved for IPv4 multicast?",
+			"ANSWERS": ["240.0.0.0 – 254.255.255.255", "[/] 224.0.0.0 – 239.255.255.255", "169.254.0.0 – 169.254.255.255", "127.0.0.0 – 127.255.255.255"]
+		},
+		{
+			"TITLE": "A high school in New York (school A) is using videoconferencing technology to establish student interactions with another high school (school B) in Russia. The videoconferencing is conducted between two end devices through the Internet. The network administrator of school A configures the end device with the IP address 209.165.201.10. The administrator sends a request for the IP address for the end device in school B and the response is 192.168.25.10. Neither school is using a VPN. The administrator knows immediately that this IP will not work. Why?",
+			"ANSWERS": ["This is a loopback address.", "This is a link-local address.", "[/] This is a private IP address.", "There is an IP address conflict."]
+		},
+		{
+			"TITLE": "Which three addresses are valid public addresses? (Choose three.)",
+			"ANSWERS": ["[/] 198.133.219.17", "192.168.1.245", "10.15.250.5", "[/] 128.107.12.117", "172.31.1.25", "[/] 64.104.78.227"]
+		},
+		{
+			"TITLE": "A message is sent to all hosts on a remote network. Which type of message is it?",
+			"ANSWERS": ["limited broadcast", "multicast", "[/] directed broadcast", "unicast"]
+		},
+		{
+			"TITLE": "A company has a network address of 192.168.1.64 with a subnet mask of 255.255.255.192. The company wants to create two subnetworks that would contain 10 hosts and 18 hosts respectively. Which two networks would achieve that? (Choose two.)",
+			"ANSWERS": ["192.168.1.16/28", "[/] 192.168.1.64/27", "192.168.1.128/27", "[/] 192.168.1.96/28", "192.168.1.192/28"]
+		},
+		{
+			"TITLE": "Which address is a valid IPv6 link-local unicast address?",
+			"ANSWERS": ["FEC8:1::FFFF", "FD80::1:1234", "[/] FE80::1:4545:6578:ABC1", "FE0A::100:7788:998F", "FC90:5678:4251:FFFF"]
+		},
+		{
+			"TITLE": "Which of these addresses is the shortest abbreviation for the IP address: 3FFE:1044:0000:0000:00AB:0000:0000:0057?",
+			"ANSWERS": ["[/] 3FFE:1044:0:0:AB::57", "3FFE:1044:0:0:00AB::0057", "3FFE:1044:0000:0000:00AB::57", "3FFE:1044:0000:0000:00AB::0057", "3FFE:1044::AB::57", "3FFE:1044::00AB::0057"]
+		},
+		{
+			"TITLE": "A network administrator has received the IPv6 prefix 2001:DB8::/48 for subnetting. Assuming the administrator does not subnet into the interface ID portion of the address space, how many subnets can the administrator create from the /48 prefix?",
+			"ANSWERS": ["16", "256", "4096", "[/] 65536"]
+		},
+		{
+			"TITLE": "Given IPv6 address prefix 2001:db8::/48, what will be the last subnet that is created if the subnet prefix is changed to /52?",
+			"ANSWERS": ["2001:db8:0:f00::/52", "2001:db8:0:8000::/52", "2001:db8:0:f::/52", "[/] 2001:db8:0:f000::/52"]
+		},
+		{
+			"TITLE": "What type of IPv6 address is FE80::1?",
+			"ANSWERS": ["loopback", "[/] link-local", "multicast", "global unicast"]
+		},
+		{
+			"TITLE": "What is used in the EUI-64 process to create an IPv6 interface ID on an IPv6 enabled interface?",
+			"ANSWERS": ["[/] the MAC address of the IPv6 enabled interface", "a randomly generated 64-bit hexadecimal address", "an IPv6 address that is provided by a DHCPv6 server", "an IPv4 address that is configured on the interface"]
+		},
+		{
+			"TITLE": "What is the prefix for the host address 2001:DB8:BC15:A:12AB::1/64?",
+			"ANSWERS": ["2001:DB8:BC15", "[/] 2001:DB8:BC15:A", "2001:DB8:BC15:A:1", "2001:DB8:BC15:A:12"]
+		},
+		{
+			"TITLE": "An IPv6 enabled device sends a data packet with the destination address of FF02::1. What is the target of this packet?​",
+			"ANSWERS": ["the one IPv6 device on the link that has been uniquely configured with this address", "[/] all IPv6 enabled devices on the local link​ or network", "only IPv6 DHCP servers​", "only IPv6 configured routers"]
+		},
+		{
+			"TITLE": "Which IPv6 prefix is reserved for communication between devices on the same link?",
+			"ANSWERS": ["FC00::/7", "2001::/32", "[/] FE80::/10", "FDFF::/7"]
+		},
+		{
+			"TITLE": "Which type of IPv6 address refers to any unicast address that is assigned to multiple hosts?",
+			"ANSWERS": ["unique local", "global unicast", "link-local", "[/] anycast"]
+		},
+		{
+			"TITLE": "What are two types of IPv6 unicast addresses? (Choose two.)",
+			"ANSWERS": ["[/] loopback", "[/] link-local", "anycast", "broadcast", "multicast"]
+		},
+		{
+			"TITLE": "Which service provides dynamic global IPv6 addressing to end devices without using a server that keeps a record of available IPv6 addresses?",
+			"ANSWERS": ["stateful DHCPv6", "[/] SLAAC", "static IPv6 addressing", "stateless DHCPv6"]
+		},
+		{
+			"TITLE": "Which protocol supports Stateless Address Autoconfiguration (SLAAC) for dynamic assignment of IPv6 addresses to a host?",
+			"ANSWERS": ["ARPv6", "DHCPv6", "[/] ICMPv6", "UDP"]
+		},
+		{
+			"TITLE": "A technician uses the ping 127.0.0.1 command. What is the technician testing?",
+			"ANSWERS": ["connectivity between two adjacent Cisco devices", "connectivity between a PC and the default gateway", "connectivity between two PCs on the same network", "physical connectivity of a particular PC and the network", "[/] the TCP/IP stack on a network host"]
+		},
+		{
+			"TITLE": "Which protocol is used by the traceroute command to send and receive echo-requests and echo-replies?",
+			"ANSWERS": ["SNMP", "[/] ICMP", "Telnet", "TCP"]
+		},
+		{
+			"TITLE": "Which ICMPv6 message is sent when the IPv6 hop limit field of a packet is decremented to zero and the packet cannot be forwarded?",
+			"ANSWERS": ["network unreachable", "[/] time exceeded", "protocol unreachable", "port unreachable"]
+		},
+		{
+			"TITLE": "A user executes a traceroute over IPv6. At what point would a router in the path to the destination device drop the packet?",
+			"ANSWERS": ["when the value of the Hop Limit field reaches 255", "[/] when the value of the Hop Limit field reaches zero", "when the router receives an ICMP time exceeded message", "when the target host responds with an ICMP echo reply message"]
+		},
+		{
+			"TITLE": "What is the purpose of ICMP messages?",
+			"ANSWERS": ["to inform routers about network topology changes", "to ensure the delivery of an IP packet", "[/] to provide feedback of IP packet transmissions", "to monitor the process of a domain name to IP address resolution"]
+		},
+		{
+			"TITLE": "What source IP address does a router use by default when the traceroute command is issued?",
+			"ANSWERS": ["the highest configured IP address on the router", "a loopback IP address", "[/] the IP address of the outbound interface", "the lowest configured IP address on the router"]
+		},
+		{
+			"TITLE": "A user issues a ping 192.135.250.103 command and receives a response that includes a code of 1. What does this code represent?",
+			"ANSWERS": ["[/] host unreachable", "protocol unreachable", "port unreachable", "network unreachable"]
+		},
+		{
+			"TITLE": "Which subnet would include the address 192.168.1.96 as a usable host address?",
+			"ANSWERS": ["[/] 192.168.1.64/26", "192.168.1.32/27", "192.168.1.32/28", "192.168.1.64/29"]
+		},
+		{
+			"TITLE": "A host is transmitting a broadcast. Which host or hosts will receive it?",
+			"ANSWERS": ["[/] all hosts in the same subnet", "a specially defined group of hosts", "the closest neighbor on the same network", "all hosts on the Internet"]
+		},
+		{
+			"TITLE": "A host is transmitting a unicast. Which host or hosts will receive it?",
+			"ANSWERS": ["[/] one specific host", "a specially defined group of hosts", "all hosts on the Internet", "the closest neighbor on the same network"]
+		},
+		{
+			"TITLE": "A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 3. What does this code represent?",
+			"ANSWERS": ["[/] address unreachable", "network unreachable", "host unreachable", "protocol unreachable"]
+		},
+		{
+			"TITLE": "A host is transmitting a multicast. Which host or hosts will receive it?",
+			"ANSWERS": ["[/] a specially defined group of hosts", "the closest neighbor on the same network", "one specific host", "directly connected network devices"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+			"ANSWERS": ["[/] 2001:db8::a0b0:8:1", "2001:db8::ab8:1:0:1000", "2001:db80:0:1::80:1", "2001:db80:::1::80:1"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address fe80:09ea:0000:2200:0000:0000:0fe0:0290?",
+			"ANSWERS": ["[/] fe80:9ea:0:2200::fe0:290", "fe80:9:20::b000:290", "fe80:9ea0::2020:0:bf:e0:9290", "fe80:9ea0::2020::bf:e0:9290"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2002:0042:0010:c400:0000:0000:0000:0909?",
+			"ANSWERS": ["[/] 2002:42:10:c400::909", "200:420:110:c4b::910:0:90", "2002:4200::25:1090:0:99", "2002:42::25:1090:0:99"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0ab8:0001:0000:1000?",
+			"ANSWERS": ["[/] 2001:db8::ab8:1:0:1000", "2001:db8::a0b0:8:1", "2001:db8:1::ab8:0:1", "2001:db8:0:1::8:1"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2002:0420:00c4:1008:0025:0190:0000:0990?",
+			"ANSWERS": ["[/] 2002:420:c4:1008:25:190::990", "2002:42:10:c400::909", "2002:4200::25:1090:0:99", "2002:42::25:1090:0:99"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+			"ANSWERS": ["[/] 2001:db8::a0b0:8:1", "2001:db8:1::ab8:0:1", "2001:db8::ab8:1:0:1000", "2001:db8:0:1::8:1"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address fe80:0000:0000:0000:0220:0b3f:f0e0:0029?",
+			"ANSWERS": ["[/] fe80::220:b3f:f0e0:29", "fe80:9ea:0:2200::fe0:290", "fe80:9ea0::2020:0:bf:e0:9290", "fe80:9ea0::2020::bf:e0:9290"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2001:0db8:0000:0000:0000:a0b0:0008:0001?",
+			"ANSWERS": ["[/] 2001:db8::a0b0:8:1", "2001:db8::ab8:1:0:1000", "2001:db80:0:1::80:1", "2001:db8:0:1::8:1"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address 2002:0042:0010:c400:0000:0000:0000:0909?",
+			"ANSWERS": ["[/] 2002:42:10:c400::909", "2002:4200::25:1090:0:99", "2002:420:c4:1008:25:190::990", "2002:42::25:1090:0:99"]
+		},
+		{
+			"TITLE": "Which is the compressed format of the IPv6 address fe80:09ea:0000:2200:0000:0000:0fe0:0290?",
+			"ANSWERS": ["[/] fe80:9ea:0:2200::fe0:290", "fe80:9ea0::2020:0:bf:e0:9290", "fe80::220:b3f:f0e0:29", "fe80::0220:0b3f:f0e0:0029"]
+		},
+		{
+			"TITLE": "A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 2 . What does this code represent?",
+			"ANSWERS": ["[/] beyond scope of the source address", "communication with the destination administratively prohibited", "address unreachable", "no route to destination"]
+		},
+		{
+			"TITLE": "A user issues a ping 192.135.250.103 command and receives a response that includes a code of 1 . What does this code represent?",
+			"ANSWERS": ["[/] host unreachable", "beyond scope of the source address", "address unreachable", "communication with the destination administratively prohibited"]
+		},
+		{
+			"TITLE": "A user issues a ping fe80:65ab:dcc1::100 command and receives a response that includes a code of 3. What does this code represent?",
+			"ANSWERS": ["[/] address unreachable", "communication with the destination administratively prohibited", "beyond scope of the source address", "no route to destination"]
+		},
+		{
+			"TITLE": "A user issues a ping 10.10.14.67 command and receives a response that includes a code of 0. What does this code represent?",
+			"ANSWERS": ["[/] network unreachable", "protocol unreachable", "port unreachable", "host unreachable"]
+		},
+		{
+			"TITLE": "A user issues a ping fe80:65ab:dcc1::100 command and receives a response that includes a code of 4. What does this code represent?",
+			"ANSWERS": ["[/] port unreachable", "host unreachable", "protocol unreachable", "network unreachable"]
+		},
+		{
+			"TITLE": "A user issues a ping 198.133.219.8 command and receives a response that includes a code of 0 . What does this code represent?",
+			"ANSWERS": ["[/] network unreachable", "protocol unreachable", "port unreachable", "host unreachable"]
+		},
+		{
+			"TITLE": "A user issues a ping 2001:db8:3040:114::88 command and receives a response that includes a code of 4 . What does this code represent?",
+			"ANSWERS": ["[/] port unreachable", "host unreachable", "protocol unreachable", "network unreachable"]
+		},
+		{
+			"TITLE": "A user issues a ping 2001:db8:FACE:39::10 command and receives a response that includes a code of 2. What does this code represent?",
+			"ANSWERS": ["[/] beyond scope of the source address", "host unreachable", "protocol unreachable", "network unreachable"]
+		}
+	]
+}

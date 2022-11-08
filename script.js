@@ -33,7 +33,7 @@ function getTotalAnswers(res, index) {
 
 $.ajax({
 	dataType: "json",
-	url: "resources/data.json",
+	url: "resources/module-11-13.json",
 	success: function (res) {
 		const QUESTIONNAIRE_SIZE = res["QUESTIONS"].length
 		const DEFAULT_OPTION_CLASS = "card shadow-sm p-3"
